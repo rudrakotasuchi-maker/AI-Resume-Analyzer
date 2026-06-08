@@ -78,11 +78,16 @@ if analyze and uploaded_file and job_description:
     value=f"{round(ats_score,2)}%"
     )
 
-    missing_skills = []
+   missing_skills = []
 
-    for skill in skills:
-        if skill in job_description and skill not in resume_text:
-            missing_skills.append(skill)
+   for skill in skills:
+       if skill in job_description and skill not in resume_text:
+        missing_skills.append(skill)
 
-    st.subheader("Missing Skills")
-    st.write(missing_skills)
+   st.subheader("Missing Skills")
+
+   if missing_skills:
+       for skill in missing_skills:
+        st.write("❌", skill)
+   else:
+       st.success("No missing skills found")
