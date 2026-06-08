@@ -95,7 +95,7 @@ if analyze and uploaded_file and job_description:
     st.pyplot(fig)
 
    
-   missing_skills = []
+    missing_skills = []
 
    for skill in skills:
        if skill in job_description and skill not in resume_text:
