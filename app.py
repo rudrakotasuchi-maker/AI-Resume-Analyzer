@@ -52,10 +52,31 @@ if analyze and uploaded_file and job_description:
     ) * 100
 
     st.subheader("Matched Skills")
-    st.write(matched_skills)
+
+    for skill in matched_skills:
+        st.markdown(
+        f"""
+        <span style="
+        background-color:green;
+        color:white;
+        padding:6px;
+        border-radius:10px;
+        margin:4px;
+        display:inline-block;">
+        {skill}
+        </span>
+        """,
+        unsafe_allow_html=True
+       )
 
     st.subheader("ATS Score")
-    st.write(round(ats_score, 2), "%")
+
+    st.progress(int(ats_score))
+
+    st.metric(
+    label="ATS Score",
+    value=f"{round(ats_score,2)}%"
+    )
 
     missing_skills = []
 
