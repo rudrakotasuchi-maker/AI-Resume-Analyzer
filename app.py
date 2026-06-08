@@ -115,3 +115,29 @@ if st.button("Analyze Resume") and uploaded_file and job_description:
             st.write("❌", skill)
     else:
         st.success("No missing skills found")
+    st.subheader("Missing Skills")
+
+if missing_skills:
+    for skill in missing_skills:
+        st.write("❌", skill)
+else:
+    st.success("No missing skills found")
+
+# Create Report
+report = f"""
+ATS Score: {ats_score:.2f}%
+
+Matched Skills:
+{', '.join(matched_skills)}
+
+Missing Skills:
+{', '.join(missing_skills)}
+"""
+
+# Download Button
+st.download_button(
+    label="📥 Download Analysis Report",
+    data=report,
+    file_name="ATS_Report.txt",
+    mime="text/plain"
+)
