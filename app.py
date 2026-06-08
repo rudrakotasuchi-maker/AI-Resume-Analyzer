@@ -1,5 +1,6 @@
 import streamlit as st
 from PyPDF2 import PdfReader
+import matplotlib.pyplot as plt
 
 skills = [
     "python",
@@ -77,7 +78,23 @@ if analyze and uploaded_file and job_description:
     label="ATS Score",
     value=f"{round(ats_score,2)}%"
     )
+    st.subheader("Skills Match Analysis")
 
+    matched_count = len(matched_skills)
+
+    missing_count = len(skills) - len(matched_skills)
+
+    fig, ax = plt.subplots()
+
+    ax.pie(
+     [matched_count, missing_count],
+      labels=["Matched", "Missing"],
+      autopct="%1.1f%%"
+    )
+
+    st.pyplot(fig)
+
+   
    missing_skills = []
 
    for skill in skills:
