@@ -27,7 +27,8 @@ Technologies Used
 - PyPDF2
 ## 🌐 Live Demo
 https://ai-resume-analyzer-msifhcub4nt7br2rgrfxak.streamlit.app/
-##github URL:
+
+## 🐙github URL
 https://github.com/rudrakotasuchi-maker/AI-Resume-Analyzer/blob/main/README.md
 
 ## Screenshots
