@@ -25,6 +25,8 @@ Technologies Used
 - Python
 - Streamlit
 - PyPDF2
+## 🌐 Live Demo
+https://ai-resume-analyzer-msifhcub4nt7br2rgrfxak.streamlit.app/
 
 How It Works
 
