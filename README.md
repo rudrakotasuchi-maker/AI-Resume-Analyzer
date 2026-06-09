@@ -27,7 +27,15 @@ Technologies Used
 - PyPDF2
 ## 🌐 Live Demo
 https://ai-resume-analyzer-msifhcub4nt7br2rgrfxak.streamlit.app/
+## Screenshots
 
+### ATS Analysis Result
+
+![ATS Result](Screenshot%202026-06-09%20214822.png)
+
+### Missing Skills Detection
+
+![Missing Skills](Screenshot%202026-06-09%20214837.png)
 How It Works
 
 1. Upload your resume PDF.
@@ -39,15 +47,9 @@ How It Works
    - Missing Skills
    - Resume Suggestions
 
-Installation
-
+Installation:
 pip install -r requirements.txt
 streamlit run app.py
-
-Project Screenshot
-
-(Add your project screenshot here)
-
 Future Improvements
 
 - AI-generated resume suggestions
